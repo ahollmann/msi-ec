@@ -939,6 +939,7 @@ static struct msi_ec_conf CONF10 __initdata = {
 
 static const char *ALLOWED_FW_11[] __initconst = {
 	"16S6EMS1.111", // Prestige 15 A11SCX
+	"1552EMS1.119", // Modern 15 a11m
 	NULL 
 };
 
