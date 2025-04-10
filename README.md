@@ -26,6 +26,10 @@ Eager to support the project? Your help is always welcome to keep the project al
 
 ## Installation
 
+If you're running Linux kernel 6.4 or newer, it likely includes the upstreamed `msi-ec` module. Attempting to build and then load the module using `modprobe -v msi-ec` may fail due to a duplicate module name. You can resolve this by overriding the preferred module location with a `depmod.d` configuration file. The following command fixes the issue (tested on Arch Linux):
+
+`sudo sh -c 'echo "override msi-ec * extra" > /etc/depmod.d/override-msi-ec.conf && depmod'`
+
 ### From GitHub
 
 #### Prerequisities:
